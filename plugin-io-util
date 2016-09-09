@@ -1,11 +1,12 @@
 plugin {
     id 100541
     plugin Linux.DiskUtilization.Check
-    command check-util
+    command check-io-util
     datatype statistic
     category System,Linux
     abstract Disk Utilization check
     description Linux disk i/o statistics
+    subkey device
 }
 
 statistic {

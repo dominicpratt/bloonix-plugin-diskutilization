@@ -61,7 +61,7 @@ foreach my $line (@output) {
     my @parts = split /\s+/, $line;
     next unless @parts == 14;
     if (exists $util->{$parts[0]}) {
-        $util->{$parts[0]} = $parts[13];
+        $util->{$parts[0]}->{util} = $parts[13];
     }
 }
 
@@ -74,7 +74,7 @@ foreach my $dev (@{$opt->{device}}) {
     }
 }
 
-my $message = "%util: " . join("; ", map { "$_: $util->{$_}" } keys %$util);
+my $message = "%util: " . join("; ", map { "$_: $util->{$_}->{util}" } keys %$util);
 
 $plugin->exit(
     status => "OK",
