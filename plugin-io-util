@@ -25,7 +25,7 @@ chart {
         ylabel Disk Utilization in percent
         chart-type area
         series {
-            name utilization
+            name util
             color \#005467
         }
     }
