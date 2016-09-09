@@ -28,7 +28,7 @@ my $plugin = Bloonix::Plugin->new(version => "0.1");
 
 $plugin->example(
     description => "Parse the output of %util in iostat -x.",
-    arguments => [ disk => "sda" ]
+    arguments => [ device => "sda" ]
 );
 
 $plugin->add_option(
